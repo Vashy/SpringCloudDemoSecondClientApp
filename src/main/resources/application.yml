@@ -3,9 +3,9 @@ spring:
     name: second-client-app
   cloud:
     config:
-      uri: http://localhost:8888 # default
+      uri: http://config-server:8888 
   config:
-    import: configserver:http://localhost:8888
+    import: configserver:http://config-server:8888
 logging:
   level:
     org:
