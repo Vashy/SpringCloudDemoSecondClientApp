@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: second-client-app
+  cloud:
+    config:
+      uri: http://localhost:8888 # default
+  config:
+    import: configserver:http://localhost:8888
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: ERROR
